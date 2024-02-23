@@ -3,7 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="category-wrapper">
+          <div class="select-menu">
+            <select name="quote-items" id="quote-items">
+              <option value="" disabled selected>Select the quote type</option>
+              <option value="funny">Funny</option>
+              <option value="motivational">Motivational</option>
+            </select>
+          </div>
+          <button>Random Quote Generator</button>
+        </div>
+
+        <div class="text">
+          <p>Practice makes a man perfect.</p>
+        </div>
+
+        <div class="previous">
+          <button class="previous">Previous</button>
+          <button class="next">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
