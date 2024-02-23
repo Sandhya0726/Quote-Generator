@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(203, 235, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .wrapper {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(128, 195, 247);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.wrapper button {
+  height: 20px;
+
+  width: 30%;
+}
+.category-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+.text {
+  /* background-color: bisque; */
+  place-self: center;
+  margin: 10px 10px;
+  font-family: cursive;
+  font-weight: bolder;
+}
+#quote-items {
+  outline: none;
+  height: 20px;
+  padding: 2px;
+}
+.previous {
+  align-self: center;
+  display: flex;
+  /* gap: 20px; */
+  width: 40%;
+  /* background-color: black; */
+  justify-content: center;
+}
