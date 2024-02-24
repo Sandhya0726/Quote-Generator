@@ -12,7 +12,7 @@ const quotes = {
     "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
   ],
 };
-
+console.log(quotes);
 let currentCategory = "Funny";
 let currentIndex = 0;
 
@@ -43,13 +43,13 @@ function changeCategory() {
 }
 
 const toggle_button = document.querySelector("#checkbox");
+const container = document.querySelector("#container");
+
 console.log(toggle_button);
 toggle_button.addEventListener("change", () => {
   if (toggle_button.checked) {
-    console.log("checked");
-    document.body.classList.add("dark-mode");
+    container.classList.add("dark-mode");
   } else {
-    console.log("unchecked");
-    document.body.classList.remove("dark-mode");
+    container.classList.remove("dark-mode");
   }
 });

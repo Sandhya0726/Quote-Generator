@@ -1,24 +1,52 @@
 /* lightmode style.................................................................... */
 
-.container {
+#container {
   width: 100%;
   height: 100vh;
-  background-color: rgb(203, 235, 236);
+  background-color: #438e96;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10vh;
 }
-.container .wrapper {
+.heading {
+  font-size: xx-large;
+  font-family: monospace;
+  color: whitesmoke;
+}
+.font {
+  height: 5vh;
+  width: 20%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  gap: 2px;
+}
+
+.decrease-size {
+  font-size: small;
+}
+.increase-size {
+  font-size: large;
+}
+#container .wrapper {
   width: 50%;
   height: 60%;
-  background-color: rgb(128, 195, 247);
+  background-color: #8ebbc0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+}
+
+button {
+  border: none;
+  background-color: #d87607;
+  color: white;
+  font-size: 14px;
 }
 .wrapper button {
   height: 20px;
@@ -31,7 +59,6 @@
   margin-top: 5px;
 }
 .text {
-  /* background-color: bisque; */
   place-self: center;
   margin: 10px 10px;
   font-family: cursive;
@@ -39,8 +66,13 @@
   color: brown;
   padding: 5px;
   height: 10vh;
+  width: 90%;
+  background-color: #8fa8aa;
   place-items: center;
   text-align: center;
+}
+.text::before {
+  content: attr(text);
 }
 #quoteitems {
   outline: none;
@@ -50,15 +82,17 @@
 }
 select {
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
+  color: white;
   border: 1px solid #ccc;
+  background-color: #d87607;
   border-radius: 5px;
 }
 select option {
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #d87607;
+  color: white;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #random-btn {
@@ -67,7 +101,7 @@ select option {
 }
 .previous {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 5px;
 }
 #previous,
@@ -93,7 +127,8 @@ select option {
 .toggle-btn {
   width: 100%;
   height: 10vh;
-  margin-right: 5%;
+  display: flex;
+  justify-content: space-around;
 }
 .toggle-label {
   height: 2rem;
@@ -110,7 +145,7 @@ select option {
   height: 2rem;
   width: 2rem;
   border-radius: 3rem;
-  background-color: rgb(231, 180, 86);
+  background-color: #d87607;
   position: absolute;
   left: 0;
 }
@@ -118,37 +153,35 @@ select option {
   visibility: hidden;
 }
 #checkbox:checked + .toggle-label .toggle-ball {
+  border: 1px solid white;
   transform: translateX(2rem);
   background-color: black;
 }
 
 /* darkmode style ................................................... */
-
-.container {
+#container.dark-mode {
   background-color: black;
 }
-.container .wrapper {
+#container.wrapper.dark-mode {
   width: 50%;
   height: 60%;
-  background-color: rgb(164, 168, 171);
+  background-color: rgb(171, 164, 165);
 }
 
 /* for mobile device */
 
 @media screen and (max-width: 480px) {
-  .container {
+  #container {
     width: 100%;
     height: 100vh;
-    background-color: rgb(203, 235, 236);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .container .wrapper {
+  #container .wrapper {
     width: 90%;
-    height: 80%;
-    background-color: rgb(128, 195, 247);
+    height: 70%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -161,7 +194,7 @@ select option {
   }
   .category-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 5px;
     margin-top: 5px;
   }

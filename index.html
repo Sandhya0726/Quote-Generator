@@ -7,8 +7,9 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
+    <div id="container">
       <div class="toggle-btn">
+        <span class="heading">Quote Generator</span>
         <input type="checkbox" id="checkbox" />
         <label for="checkbox" class="toggle-label">
           <span class="toggle-ball"></span>
@@ -28,8 +29,12 @@
           </button>
         </div>
 
-        <div class="text">
-          <p id="quote"></p>
+        <div class="text" contenteditable="true">
+          <p id="quote">QUOTES</p>
+        </div>
+        <div class="font">
+          <button class="decrease-size">A</button>
+          <button class="increase-size">A</button>
         </div>
 
         <div class="previous">
