@@ -1,24 +1,55 @@
-.container {
+/* lightmode style.................................................................... */
+
+#container {
   width: 100%;
   height: 100vh;
-  background-color: rgb(203, 235, 236);
+  background-color: #438e96;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10vh;
 }
-.container .wrapper {
+.heading {
+  font-size: xx-large;
+  font-family: monospace;
+  color: whitesmoke;
+}
+.font {
+  height: 5vh;
+  width: 20%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: end;
+  text-align: center;
+  gap: 2px;
+}
+
+.decrease-size {
+  font-size: small;
+}
+.increase-size {
+  font-size: large;
+}
+#container .wrapper {
   width: 50%;
   height: 60%;
-  background-color: rgb(128, 195, 247);
+  background-color: #8ebbc0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
 }
+
+button {
+  border: none;
+  background-color: #d87607;
+  color: white;
+  font-size: 14px;
+}
 .wrapper button {
   height: 20px;
-  background-color: red;
   width: 30%;
 }
 .category-wrapper {
@@ -26,38 +57,42 @@
   justify-content: center;
   gap: 5px;
   margin-top: 5px;
-  background-color: burlywood;
 }
 .text {
-  /* background-color: bisque; */
   place-self: center;
   margin: 10px 10px;
   font-family: cursive;
   font-weight: bolder;
-  background-color: blueviolet;
+  color: brown;
   padding: 5px;
-  height: 20vh;
+  height: 10vh;
+  width: 90%;
+  background-color: #8fa8aa;
   place-items: center;
   text-align: center;
+}
+.text::before {
+  content: attr(text);
 }
 #quoteitems {
   outline: none;
   height: 20px;
   padding: 2px;
-  background-color: chartreuse;
   height: 5vh;
 }
 select {
   padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
+  color: white;
   border: 1px solid #ccc;
+  background-color: #d87607;
   border-radius: 5px;
 }
 select option {
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #d87607;
+  color: white;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #random-btn {
@@ -65,17 +100,190 @@ select option {
   border-radius: 5px;
 }
 .previous {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+#previous,
+#next {
   align-self: center;
   display: flex;
-  /* gap: 20px; */
-  width: 40%;
-  /* background-color: black; */
+  width: 20%;
   justify-content: space-around;
-  background-color: cornflowerblue;
+  border-radius: 5px;
+  height: 5vh;
+  align-items: center;
 }
 
 .qg-btn {
-  background-color: black;
   display: flex;
   justify-content: center;
+}
+#qg {
+  height: 5vh;
+  border-radius: 5px;
+  width: 50%;
+}
+.toggle-btn {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+.toggle-label {
+  height: 2rem;
+  width: 4rem;
+  background-color: whitesmoke;
+  border: solid 1px black;
+  box-shadow: brown;
+  float: right;
+  border-radius: 5rem;
+  position: relative;
+}
+
+.toggle-ball {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 3rem;
+  background-color: #d87607;
+  position: absolute;
+  left: 0;
+}
+#checkbox {
+  visibility: hidden;
+}
+#checkbox:checked + .toggle-label .toggle-ball {
+  border: 1px solid white;
+  transform: translateX(2rem);
+  background-color: black;
+}
+
+/* darkmode style ................................................... */
+#container.dark-mode {
+  background-color: black;
+}
+#container.wrapper.dark-mode {
+  width: 50%;
+  height: 60%;
+  background-color: rgb(171, 164, 165);
+}
+
+/* for mobile device */
+
+@media screen and (max-width: 480px) {
+  #container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #container .wrapper {
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .wrapper button {
+    height: 5vh;
+    width: 30%;
+  }
+  .category-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  .text {
+    place-self: center;
+    margin: 10px 10px;
+    font-family: cursive;
+    font-weight: bolder;
+    color: brown;
+    padding: 5px;
+    height: 20vh;
+    place-items: center;
+    text-align: center;
+  }
+  #quoteitems {
+    outline: none;
+    height: 20px;
+    padding: 2px;
+    height: 5vh;
+  }
+  select {
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  select option {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+
+  #random-btn {
+    width: 60%;
+    height: 5vh;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  .previous {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+  }
+  #previous,
+  #next {
+    width: 30%;
+    height: 5vh;
+    font-size: 12px;
+    align-items: center;
+  }
+
+  .qg-btn {
+    display: flex;
+    justify-content: center;
+    height: 7vh;
+    width: 100%;
+  }
+  .qg {
+    border-radius: 5px;
+    font-size: 12px;
+    width: 60%;
+    height: 7vh;
+  }
+
+  .toggle-label {
+    height: 1rem;
+    width: 2rem;
+    background-color: whitesmoke;
+    border: solid 1px black;
+    float: right;
+    border-radius: 5rem;
+    position: relative;
+  }
+
+  .toggle-ball {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 3rem;
+    background-color: rgb(231, 180, 86);
+    position: absolute;
+    left: 0;
+  }
+  #checkbox {
+    visibility: hidden;
+  }
+  #checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(1rem);
+    background-color: black;
+  }
 }
