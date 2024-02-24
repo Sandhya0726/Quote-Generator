@@ -8,6 +8,12 @@
   </head>
   <body>
     <div class="container">
+      <div class="toggle-btn">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" class="toggle-label">
+          <span class="toggle-ball"></span>
+        </label>
+      </div>
       <div class="wrapper">
         <div class="category-wrapper">
           <div class="select-menu">
@@ -27,11 +33,11 @@
         </div>
 
         <div class="previous">
-          <button class="previous" onclick="prevQuote()">Previous</button>
-          <button class="next" onclick="nextQuote()">Next</button>
+          <button id="previous" onclick="prevQuote()">Previous</button>
+          <button id="next" onclick="nextQuote()">Next</button>
         </div>
         <div class="qg-btn">
-          <button onclick="displayQuote()">Code Generator</button>
+          <button id="qg" onclick="displayQuote()">Code Generator</button>
         </div>
       </div>
     </div>

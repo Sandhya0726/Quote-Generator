@@ -41,3 +41,15 @@ function changeCategory() {
   currentIndex = 0;
   displayQuote();
 }
+
+const toggle_button = document.querySelector("#checkbox");
+console.log(toggle_button);
+toggle_button.addEventListener("change", () => {
+  if (toggle_button.checked) {
+    console.log("checked");
+    document.body.classList.add("dark-mode");
+  } else {
+    console.log("unchecked");
+    document.body.classList.remove("dark-mode");
+  }
+});
