@@ -3,7 +3,7 @@
 #container {
   width: 100%;
   height: 100vh;
-  background-color: #438e96;
+  background-color: #aab7b65f;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
 .heading {
   font-size: xx-large;
   font-family: monospace;
-  color: whitesmoke;
+  color: #d87607;
 }
 .font {
   height: 5vh;
@@ -27,7 +27,7 @@
 }
 
 .decrease-size {
-  font-size: 10px;
+  font-size: 14px;
   width: 5%;
 }
 .increase-size {
@@ -37,7 +37,7 @@
 #container .wrapper {
   width: 50%;
   height: 60%;
-  background-color: #8ebbc0;
+  background-color: #438e96;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -46,8 +46,8 @@
 }
 
 button {
-  border: none;
-  background-color: #d87607;
+  border: #bfe0e2;
+  background-color: #ecf3f327;
   color: white;
   font-size: 14px;
 }
@@ -70,7 +70,7 @@ button {
   /* padding: 5px; */
   height: 15vh;
   width: 90%;
-  background-color: #8fa8aa;
+  background-color: #969ba0;
   place-items: center;
   text-align: center;
 }
@@ -90,13 +90,13 @@ select {
   padding: 10px;
   font-size: 14px;
   color: white;
-  border: 1px solid #ccc;
-  background-color: #d87607;
+  border: none;
+  background-color: #ecf3f327;
   border-radius: 5px;
 }
 select option {
-  background-color: #d87607;
-  color: white;
+  background-color: #ecf3f327;
+  color: black;
   padding: 5px 10px;
   font-size: 14px;
 }
@@ -168,12 +168,15 @@ select option {
 #container.dark-mode {
   background-color: black;
 }
-#container.wrapper.dark-mode {
+#wrapper.dark-mode {
   width: 50%;
   height: 60%;
-  background-color: rgb(171, 164, 165);
+  background-color: rgba(150, 157, 157, 0.21);
 }
 
+/* .dark-mode {
+  background-color: rgb(164, 167, 171) !important;
+} */
 /* for mobile device */
 
 @media screen and (max-width: 480px) {

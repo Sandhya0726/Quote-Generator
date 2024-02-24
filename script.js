@@ -58,5 +58,10 @@ function increaseFont() {
   document.getElementById("quote").style.fontSize = "18px";
 }
 function decreaseFont() {
-  document.getElementById("quote").style.fontSize = "10px";
+  document.getElementById("quote").style.fontSize = "14px";
 }
+
+const wrapper = document.querySelector("#wrapper");
+toggle_button.addEventListener("change", () => {
+  wrapper.classList.toggle("dark-mode");
+});
