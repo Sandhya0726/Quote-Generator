@@ -11,22 +11,27 @@
       <div class="wrapper">
         <div class="category-wrapper">
           <div class="select-menu">
-            <select name="quote-items" id="quote-items">
-              <option value="" disabled selected>Select the quote type</option>
+            <select id="quoteitems" onchange="changeCategory()">
+              <!-- <option value="" disabled selected>Select the quote type</option> -->
               <option value="funny">Funny</option>
               <option value="motivational">Motivational</option>
             </select>
           </div>
-          <button>Random Quote Generator</button>
+          <button id="random-btn" onclick="randomQuote()">
+            Random Quote Generator
+          </button>
         </div>
 
         <div class="text">
-          <p>Practice makes a man perfect.</p>
+          <p id="quote"></p>
         </div>
 
         <div class="previous">
-          <button class="previous">Previous</button>
-          <button class="next">Next</button>
+          <button class="previous" onclick="prevQuote()">Previous</button>
+          <button class="next" onclick="nextQuote()">Next</button>
+        </div>
+        <div class="qg-btn">
+          <button onclick="displayQuote()">Code Generator</button>
         </div>
       </div>
     </div>
