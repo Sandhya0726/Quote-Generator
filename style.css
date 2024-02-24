@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10vh;
+  gap: 5vh;
 }
 .heading {
   font-size: xx-large;
@@ -22,14 +22,17 @@
   display: flex;
   justify-content: end;
   text-align: center;
+  place-self: right;
   gap: 2px;
 }
 
 .decrease-size {
-  font-size: small;
+  font-size: 10px;
+  width: 5%;
 }
 .increase-size {
-  font-size: large;
+  font-size: 18px;
+  width: 5%;
 }
 #container .wrapper {
   width: 50%;
@@ -60,12 +63,12 @@ button {
 }
 .text {
   place-self: center;
-  margin: 10px 10px;
+  /* margin: 5px 5px; */
   font-family: cursive;
   font-weight: bolder;
   color: brown;
-  padding: 5px;
-  height: 10vh;
+  /* padding: 5px; */
+  height: 15vh;
   width: 90%;
   background-color: #8fa8aa;
   place-items: center;
@@ -73,6 +76,9 @@ button {
 }
 .text::before {
   content: attr(text);
+}
+p::before {
+  content: "";
 }
 #quoteitems {
   outline: none;

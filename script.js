@@ -53,3 +53,10 @@ toggle_button.addEventListener("change", () => {
     container.classList.remove("dark-mode");
   }
 });
+
+function increaseFont() {
+  document.getElementById("quote").style.fontSize = "18px";
+}
+function decreaseFont() {
+  document.getElementById("quote").style.fontSize = "10px";
+}
