@@ -15,7 +15,7 @@
           <span class="toggle-ball"></span>
         </label>
       </div>
-      <div class="wrapper">
+      <div id="wrapper" class="wrapper">
         <div class="category-wrapper">
           <div class="select-menu">
             <select id="quoteitems" onchange="changeCategory()">
@@ -30,11 +30,11 @@
         </div>
 
         <div class="text" contenteditable="true">
-          <p id="quote">QUOTES</p>
+          <p><q id="quote">QUOTES</q></p>
         </div>
         <div class="font">
-          <button class="decrease-size">A</button>
-          <button class="increase-size">A</button>
+          <button class="decrease-size" onclick="decreaseFont()">A</button>
+          <button class="increase-size" onclick="increaseFont()">A</button>
         </div>
 
         <div class="previous">
@@ -42,7 +42,7 @@
           <button id="next" onclick="nextQuote()">Next</button>
         </div>
         <div class="qg-btn">
-          <button id="qg" onclick="displayQuote()">Code Generator</button>
+          <button id="qg" onclick="displayQuote()">Quote Generator</button>
         </div>
       </div>
     </div>
