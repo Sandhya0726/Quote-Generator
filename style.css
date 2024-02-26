@@ -40,7 +40,7 @@
 }
 #container .wrapper {
   width: 50%;
-  height: 60%;
+  height: auto;
   background-color: #438e96;
   border-radius: 10px;
   display: flex;
@@ -98,6 +98,8 @@ select {
   border: none;
   background-color: #ecf3f327;
   border-radius: 5px;
+  border: none;
+  outline: none;
 }
 select option {
   background-color: #ecf3f327;
@@ -107,7 +109,7 @@ select option {
 }
 
 #random-btn {
-  height: 5vh;
+  height: 6vh;
   border-radius: 5px;
 }
 .previous {
@@ -129,6 +131,7 @@ select option {
 .qg-btn {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 #qg {
   height: 5vh;
@@ -195,7 +198,7 @@ select option {
   }
   #container .wrapper {
     width: 90%;
-    height: 70%;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -219,7 +222,7 @@ select option {
     font-weight: bolder;
     color: brown;
     padding: 5px;
-    height: 20vh;
+    height: 30vh;
     place-items: center;
     text-align: center;
   }
